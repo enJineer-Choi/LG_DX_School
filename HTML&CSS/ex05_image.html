@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 이미지 태그 : 웹 페이지에 이미지를 띄워보자
+        가장 중요한 속성! => src(source의 약자) -->
+    
+    <!-- (1) 네트워크 방식 (CDN) : 파일의 다른 서버의 주소를 활용해서 사용
+            * 장점 : 용량을 차지하지 않음
+            * 단점 : 안정성이 보장되지 않음 (원본 삭제시 사용불가)
+            * 사용 : 코드를 공유하고 오픈할 때 사용 --> 
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM5IG4w3u4KFNhgP_8DkzkIVrpnMwO7RAX1g&s" width="300px">
+    
+    <!-- (2) 파일 로드 방식 : 저장된 파일을 가져오는 방식
+            * 장점 : 안정성이 보장 (파일 지우지 않으면 삭제 X)
+            * 단점 : 용량 차지 
+            * 사용 : 실제로 서비스를 개발하고 완성할 때 활용 (같은 폴더 내에 이미지를 저장하면 이름과 확장자만 불러오면 됨)  -->
+    <!-- <img src="/img/img2/img.png" width="700px">
+    <img src="../img/img2/img.png" width="700px"> -->
+    
+    <!-- 상대경로 vs 절대경로 (매우중요!) 
+        상대경로 : 현재 작업중인 내 환경의 기준으로 작성하는 경로 (사람마다 다름)
+            * 이름/ : 폴더 입장
+            * ../ : 상위폴더로 간다는 의미
+
+        절대경로 : 작업중인 파일이 아니더라도 모든 파일이 접근 가능한 공통경로(변하지 않음)
+            * URL : URL 절대경로
+            * / : 경로 맨 앞에 작성하면 root 폴더에 한번에 접근 (최상위 경로로 이동)
+                (/)
+    -->
+    <img src="/img.png" width = "400px">
+    
+
+
+    
+
+</body>
+</html>
