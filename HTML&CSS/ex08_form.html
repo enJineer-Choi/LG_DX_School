@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        오타확인 필수 ! > 자동완성 사용
+        form : 사용자에게 입력한 값을 묶어서 관리하는 태그
+            - 서버에게 값을 전달할 때 사용하는 태그
+            input : 사용자에게 입력하는 공간을 제공하는 태그
+                - key point : type 속성을 통해서 모습을 결정
+            * input 태그는 form 안에 작성!
+        * 포인트 
+            1) input 모든 값을 value에 저장 > input은 사용자가 입력하기 때문에 value공간에 저장
+            2) 모든 input태그는 name이 필수다! > 값을 전달했을 때 구별할 수 있도록 넣어준다.
+            3) checkbox vs radio
+                - checkbox : 중복 선택 가능 ex)동의서
+                - radio : 중복 불가 ex)성별
+                - name : 그룹을 의미 (name이 동일 = 같은 그룹)
+                - value : 선택한 값의 의미 (선택한 값이 뭔지를 의미)
+        * 추가속성
+            1) placeholder : 미리보기
+            2) required : 필수값
+            3) maxlength : 길이제한 
+      -->
+        <action="" method="post"> <!-- action에는 서버의 주소를 할당해줌 / method (get (dafault): 내가 입력한 내용이 url에 표시됨 / post : 입력한 내용이 url에 표시되지 않도록 ) -->
+        ID : <input type="text" placeholder="ID를 입력하세요" required name="id"> <!--컨텐츠가 없음 : 사용자가 입력을 받는 것이기 때문-->
+        <br>
+        PW : <input type="password" placeholder="PW를 입력하세요" maxlength="10" required name="pw"> <!--type에 password가 있어서 마킹처리 되도록 받을 수 있음-->
+        <br>
+        PW 확인: <input type="password" placeholder="PW를 입력하세요" maxlength="10" required name="pw2"> <!--type에 password가 있어서 마킹처리 되도록 받을 수 있음-->
+        <br>
+        <!-- checkBox (중복선택가능!) name을 통해 동일한 카테고리임을 알 수 있음-->
+        <p>좋아하는 커피를 모두 골라주세요</p>
+        아메리카노 <input type="checkbox" name="coffee" value="americano">
+        카페라떼 <input type="checkbox" name="coffee" value="latte">
+        <br>
+
+        <!-- radio  -->
+        <!-- <p>성별을 골라주세요</p>
+        남성<input type="radio">
+        여성<input type="radio"> -->
+        <!-- 현재 같은 묶음으로 인식을 하지 못해서 둘다 선택이 가능해짐. -->
+        
+        <!-- <p>성별을 골라주세요</p>
+        남성<input type="radio" name="gender">
+        여성<input type="radio" name="gender"> -->
+        <!-- 동일한 name으로 묶어주면됨 -->
+        
+        <p>성별을 골라주세요</p>
+        남성<input type="radio" name="gender" value="men">
+        여성<input type="radio" name="gender" value="women">
+        <!-- 동일한 name으로 묶으면 > 값의 구별이 안됨 > 그래서 value를 지정! -->
+        <br>
+        <br>
+        
+        <!-- 제출 및 초기화
+         제출 및 초기화 범위 : form 태그 내부에 있는 값들만 (즉, form태그 안쪽에 작성해야함)-->
+        <input type="submit" value="로그인하기">
+        <input type="reset">
+        <br>
+        <br>
+
+        <!-- select 태그 : input태그 아님
+         리스트 태그랑 유사 , value값 안넣어도 content값이 넘어감
+         ex) 통신사 선택같이 목록이 나오고 그중 하나를 선택하게 하는 태그 -->
+        <select>
+            <option value="naver">네이버</option>
+            <option value="daum">다음</option>
+            <option value="google">구글</option>
+        </select>
+        
+        <br>
+        <br>
+        <!-- 가볍게 볼것 -->
+         <input type="file"> <!--파일 업로드 가능-->
+         <br>
+         <input type="color"><!--색 선택-->
+         <br>
+         <input type="range"> <!--범위 선택-->
+         <br>
+         <input type="datetime-local">
+         <br>
+         <input type="date">
+         <br>
+         <input type="datetime">
+    </form>
+</body>
+</html> 
