@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            none : 화면에 보이지 않도록 숨김
+            block : 화면에 보이도록 만듦   
+        */
+        .answer{
+            display: none;
+            
+        }
+        .question:hover+.answer{
+            /* Q에 마우스를 올렸을 때, A가 보여지게 하고 싶음
+            그래서 question클래스에 hover기능을 넣고,
+             형제 관계인 answer클래스가 보여지게 하고 싶음!
+            */
+            display: block;
+            color: blue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Q는 보이게 하고, A는 숨기고 싶음 (Q에 마우스를 대면, A를 구현하고 싶음) -->
+    <span class="question">Q. 오늘은 무슨 요일인가요?</span>
+    <span class="answer">A. 오늘은 금요일입니다</span>
+    <br><br>
+    <span class="question">Q. 우리반 구호는 뭔가요?</span>
+    <span class="answer">A. 5기 갓!생!</span>
+</body>
+</html>

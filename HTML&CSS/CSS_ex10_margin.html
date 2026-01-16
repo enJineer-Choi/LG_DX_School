@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            margin
+                - 위치 : 박스테두리 바깥쪽
+                - 영향 : 다른 요소와 거리조절
+                - 배경 : 배경색 적용 X
+            padding 
+                - 위치 : 박스 테두리 안쪽
+                - 영향 : 요소의 크기와 내부 컨텐츠 위치 조절
+                - 배경 : 배경색 적용 O
+        */
+        /* #square {
+            width:100px;
+            height:100px;
+            background-color: black;
+            color: red;
+            
+
+            margin: 10px 10px 10px 10px;
+            padding-left: 50px;
+            padding-top: 50px;
+        } */
+
+        #square1{
+            width:100px;
+            height:100px;
+            background-color: red;
+            
+        }
+        #square2{
+            width:100px;
+            height:100px;
+            background-color: blue;
+            
+            margin: 0px 0px 0px 100px;
+            /* margin-left:100px;  이렇게 작성해도 됨! */
+            
+        }
+        #square3{
+            width:100px;
+            height:100px;
+            background-color: green;
+            
+            margin: 0px 0px 0px 200px;
+            /* margin-left:200px;  이렇게 작성해도 됨! */
+        }
+        #square4{
+            width:100px;
+            height:100px;
+            background-color: gray;
+            
+            margin: 0px 0px 0px 300px;
+            /* margin-left:300px;  이렇게 작성해도 됨! */
+        }
+
+
+        /* 
+        사각형의 크기는 고정이므로 
+        div {
+            width : 100px;
+            height : 100px;    
+        } 
+        #squre1{
+            margin    
+            }
+        이렇게 작성해도 됨!     */
+    </style>
+</head>
+<body>
+    <h1>실습</h1>
+    <!-- div(division) : 공간분리태그 / 블록요소, 한줄 전체를 차지함(자동 개행) -->
+    <!-- <div id="square">square</div> -->
+     <div id="square1"></div>
+     <div id="square2"></div>
+     <div id="square3"></div>
+     <div id="square4"></div>
+</body>
+</html>

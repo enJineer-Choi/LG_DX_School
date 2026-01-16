@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- link태그를 통해 별도로 작성된 css파일 불러오기 -->
+    <link rel="stylesheet" href="ex12_boxsizing.css">
+
+    <style>
+        /* 
+            CSS 우선순위 
+            1순위 : HTML 태그 내 style - 점수 : 1,000점
+            2순위 : ID 선택자 - 점수 : 100점
+            3순위 : 클래스, 가상선택자(.class, :hover) - 점수 10점
+            4순위 : 태그선택자 (div,p) 
+        */
+        div{
+            background-color: blue;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="cb" style="background-color: hotpink">
+        <p>content-box</p>
+    </div>
+    <div class="bb">
+        <p>border-box</p>
+    </div>
+</body>
+</html>

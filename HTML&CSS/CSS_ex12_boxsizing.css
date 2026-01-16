@@ -1,0 +1,33 @@
+  div {
+      border: 20px solid #dddddd;
+      padding: 20px;
+      margin: 20px;
+      width: 500px;
+
+      background-color: lightskyblue !important;
+      /*!important : 모든 우선순위를 무시하고 가장 먼저 적용된다 -> HTML에 적는것보다 훨씬 높음 */
+  }
+
+  /* box-sizing 
+    : 요소의 크기를 화면에 표시하는 방식
+    
+    content-box 
+    : 컨텐츠에 대한 영역만을 기준으로 함(위에서 설정한 값들은 content가 작성된 영역만의 크기임)
+
+    border-box
+    : content + padding + border 영역까지 크기의 기준으로 함(위에서 설정한 모든 값들안에 테두리까지 다 넣은 크기)
+        ** margin은 포함하지 않음
+
+  */
+
+  .cb {
+      box-sizing: content-box;
+      /* content-box는 컨텐츠에 대한 영역만을 기준으로 잡음 */
+      border-style: inset;
+  }
+
+  .bb {
+      box-sizing: border-box;
+      /* border-box는 컨텐츠 뿐만 아니라 바깥 테두리 영역까지 모두 포함한 크기임*/
+      border-style: outset;
+  }
