@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 150px;
+            height: 150px;
+        }
+        
+        #static{
+            /* position 속성의 default 값 : static
+            위치 속성이 비활성화됨 (변화시켜도 적용되지 않음)
+            */
+            background-color: lightblue;
+            top: 10px;
+            left: 10px;
+        }
+
+        #relative{
+            /* 
+            위치 속성이 활성화되어있음
+            기준 : 본인이 있었던 위치 기준으로 변화
+            */
+            background-color: hotpink;
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+        
+        /* from 1. : absolute를 쓰기 위해 부모 position 변경 */
+        #parents{
+            position:relative
+        }
+
+        #absolute{
+            /* 
+            위치속성 활성화
+            기준 : static이 아닌 부모, 없다면 body태그를 기준
+            (1. 부모태그가 static이면 안됨)
+            #parents에 relative 속성 부여 > 부모인 parents 기준으로 이동
+             */
+            background-color: yellow;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+
+        #fixed{
+            /* 
+            위치속성 활성화
+            부모가 누구든 상관없이 내가 보이고 있는 화면에 고정이 됨
+            기준 : body 태그
+            */
+            background-color: lightcoral;
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+        }
+    </style>
+</head>
+<body>
+    body태그
+    <div id="parents">
+        parents
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        
+        <div id="static"></div>
+        <div id="relative"></div>
+        <div id="absolute"></div>
+        <div id="fixed"></div>
+    </div>
+</body>
+</html>

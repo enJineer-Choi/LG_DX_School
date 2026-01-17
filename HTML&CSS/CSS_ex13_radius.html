@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width : 100px;
+            height: 100px;
+        }
+        /* 테두리를 둥글게 만드는 속성은 %를 사용 */
+        #redbox{
+            background-color: red;
+            /*왼쪽 위 테두리 */
+            border-top-left-radius: 20%;
+            
+            /* 왼쪽 아래 테두리를 둥글게 */
+            border-bottom-left-radius: 20%;
+
+            border-bottom-right-radius: 20%;
+
+            border-top-right-radius: 20%;
+
+        }
+        #bluebox{
+            background-color: blue;
+            /* 동그라미를 한줄로 만드려면 */
+            border-radius: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div id="redbox"></div>
+    <div id="bluebox"></div>
+    <div id="greenbox"></div>
+    <div id="greybox"></div>
+</body>
+</html>
