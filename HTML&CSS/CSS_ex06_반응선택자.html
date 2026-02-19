@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 반응선택자 : 특정 이벤트 (클릭, 호버) 에 따라서 스타일을 변경하는 선택자
+            - hover : 마우스를 올렸을 때 동작
+            - active : 마우스를 클릭했을 때 동작
+            
+            - tip : 스타일을 한번에 변경하지 않고, 천천히 or 빠르게 변경이 가능
+            * transition :  속성을 활용하면 디자인 변화의 속도를 조절이 가능
+            * transform : 요소 위치 변경 가능 (시각적)
+                - 요소 이동 : translateX,Y
+                - 요소 확대 : scale
+                - 요소 회전 : rotate
+        */
+        div{
+            color: gold;
+        }
+        /* div:hover{
+            color: red;
+            background-color: blue;
+            transition: all 1s;
+            transform: translateX(100px);
+            transform: scale(2);
+            transform: rotate(360deg);
+        } */
+        div:active{
+            color: greenyellow;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        hello world!
+    </div>
+</body>
+</html>

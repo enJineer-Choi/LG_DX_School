@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 계층선택자 : 서로의 포함관계를 활용한 선택자
+            * 포함관계 : 태그안에 태그가 존재한다.
+            * 나를 포함하고 있는 바로 위에 태그를 부모태그,
+              나에게 포함된 태그를 자식태그
+            * 기호(>) 를 활용해서 작성한다.
+            * 사용이유 : 모든 태그에게 클래스이름이나 아이디를 부여할 수 없음 (관리 어려움)
+            * 순서를 작성할 때 맨 처음이 시작점. 맨 마지막이 목적지, 중간은 경유지
+            태그별로 띄어쓰기를 한다면 그 안에 사용하겠다는 의미 (직접적인 자식관계가 아닌경우에는 그냥 띄어쓰기 사용해도 무방)
+            (>) 사용할 때는 명확한 부모자식 관계가 존재할 때 - 우선순위가 더 높아짐
+        */
+        div span{
+            color: red;
+        }
+        div li{
+            color:cornflowerblue;
+        }
+        ol>span{
+            color:aquamarine;
+        }
+        /* 형제선택자1 : 바로 뒤에 있는 딱 하나만 선택 (+) 사용 */
+        li + li {
+            color: violet;
+        }
+        /* 형제선택자2 : 뒤에 오는 모든 형제 선택 (~) 사용 */
+        li ~ li {
+            color: yellow;
+        }
+        /* ol>li {
+            color:green;
+        } */
+    </style>
+</head>
+<body>
+    <div>
+        <strong>훈련생 수칙</strong>
+        <ol>
+            <li>지각하지 않기</li>
+            <li>결석하지 않기</li>
+            <span>(불가피 할 땐 꼭 담임선생님께 미리 말하기)</span>
+            <li>복습하기</li>
+        </ol>
+    </div>
+</body>
+</html>
