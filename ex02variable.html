@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //변수 - 임시적으로 값을 저장하는 공간
+        // Javascript에서 변수 선언 및 값 저장 방법
+        var num1 = 10;
+        let num2 = 10;
+        const num3 = 10;
+
+        console.log(num1,num2,num3);
+
+        // var 변수는 같은이름으로 변수 생성이 가능, 심지어 지역변수 조차도 외부에서 사용할 수 있게 만듦.
+        // 너무 자유분방해서 문제점이 많아 잘 사용하지 않음.
+        var num1 = 10;
+
+        // let 변수 같은이름으로 변수 생성 불가능, 지역변수로 만들었을 때 지역변수로만 사용 가능
+        // let num2 = 10; 
+        num2 = 30; //let으로 설정한 변수 값을 변경하고 싶을 때는, 변수이름만 가져와서 하면 됨.
+        //let을 붙이고 num을 재작성하면, 변수를 새로 설정한다는 의미
+
+        // const 는 상수로 설정되면 값이 바뀌지 않음
+        num3 = 40;
+
+        // let - 계속해서 변화하는 값을 저장해야 할 때
+        // const - 한번 입력된 값이 변경되어서는 안될 때
+
+
+    </script>
+</body>
+</html>

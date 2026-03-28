@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //프롬프트로 입력받으면 문자열로 입력을 받게 된다.
+        const num1 = parseInt(prompt("첫번째 정수를 입력하세요"));
+        const num2 = parseInt(prompt("두번째 정수를 입력하세요"));
+        const op = prompt("연산자를 입력하세요");
+        let result = 0;
+        
+        
+        if (op === "+"){
+            result = num1+num2;
+        } else if (op === "-"){
+            result = num1-num2;
+        } else if (op === "*"){
+            result = num1*num2;
+        } else if (op === "/"){
+            result = num1/num2;
+        }
+
+
+        
+        document.write("====사칙연산(+,-,*,/)====<br>");
+        
+        document.write("연산결과 :",result);
+    </script>
+</body>
+</html>

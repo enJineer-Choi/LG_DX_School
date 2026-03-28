@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>    
+        const num1 = 7;
+        const num2 = 3;
+
+        // js에서는 나누기 연산자 사용 시 소수점까지 계산
+        const result = num1 / num2;
+        console.log(result);
+
+
+        // 실수를 정수형태로 변환하기 위해서는 parseInt 함수사용
+        const result2 = parseInt(num1/num2);
+        console.log(result2);
+
+        
+        const inum = 5;
+        const dnum = 5.0;
+        const snum = "5";
+        
+        // 모두 동일하다고 나옴 
+        // Js에서는 == (비교연산자) 사용시 데이터 타입을 비교하는 게 아니라 "값"만 비교 
+        // 데이터타입을 확인하지 않고 값만 활용함.
+        console.log(inum == dnum);
+        console.log(dnum == snum);
+        console.log(inum == snum);
+      
+        console.log("-----------------")
+
+        // 데이터 타입과 값까지 같은지 비교하고 싶을 때는 === 을 사용해야함
+        console.log(inum === dnum);
+        console.log(dnum === snum);
+        console.log(inum === snum);
+        
+        console.log("-----------------")
+        console.log(0=='0');
+        console.log(0==[]);
+        console.log('0'==[]);
+
+    </script>   
+</body>
+</html>
