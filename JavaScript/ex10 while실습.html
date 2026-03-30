@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //보스몹 딜 계산기
+        //1. 보스 몬스터의 총 체력 입력
+        //2. 내 캐릭터의 공격력 입력
+        //3. 총 몇회걸쳐서 공격하면 보스 몬스터를 잡을 수 있는지 횟수와 총 데미지 수치를 안내
+
+        let num1 = parseInt(prompt("보스 몬스터의 총 체력 입력"));
+        let num2 = parseInt(prompt("내 캐릭터의 공격력"));
+
+        let count = 0;
+        let damage = 0;
+        
+        while (num1 > 0){
+            num1 = num1 - num2;
+            damage += num2;
+            count++;
+        }
+        document.write(count,"회 공격 (총 데미지 수치 : "+damage+")");
+        //굳이 result라는 변수를 따로 만들 필요없이, 전체 몬스터 공격력을 빼나가는 방식으로 만들면 됨.
+        // 누적 데미지는 내가 공격한 공격력을 중심으로 counting하면 됨.
+
+    </script>
+</body>
+</html>

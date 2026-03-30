@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 반복문 - 조건에 성립하면 반복을 하는 문법
+        //while - 반복횟수가 지정되지 않았을 때 주로 사용
+        //1부터 10까지 출력하기
+        let count = 1;
+        let result = 0;
+        while(count <= 10){
+            result = result + count; //sum+=count
+            document.write(count + " ");
+            count++;
+           
+        }
+        document.write("<br>",result)
+        //while문 () 안에가 True여야 {} 안의 반복문을 반복
+
+        //실습문제. 마지막 출력에는 1부터 10까지의 총합을 출력
+        // let count = 1;
+        // let result = 0;
+        // while(count <= 10){
+        //     
+        //     document.write(count + " ");
+        //     count++;
+        //     result = result + count;
+           
+        // }
+        // document.write(result)
+        // 순서를 이렇게 해버리면 count++인 상태. 즉 10에서 한번 더 더하고 출력되므로, ;count++전에 result를 계산해줘야함.
+
+
+
+    </script>
+</body>
+</html>

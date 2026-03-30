@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1부터 1000까지 완전 수 출력
+        // let result = 0;
+        // for (let i = 1; i <=1000;i++){
+        //     for (let j =1; j<i;j++){
+        //         if((i%j===0)  ){
+        //             result += j;
+        //             if (result == i){
+        //                 document.write(i);
+        //             }
+                
+        //         }
+        //     }
+
+        // }
+
+
+        // 에러 1. result를 전역변수로 만들어버리면 값이 나오지 않음
+        // let result = 0;
+        // for (let i = 1;i<=1000;i++){
+        //     for (let j = 1; j<i;j++){
+        //         if (i%j == 0){
+        //             result += j;
+        //         }
+        //     }
+        //     if (i==result){
+        //         document.write(result)
+        //     }
+        // }
+        
+        for (let i = 1;i<=1000;i++){
+            let result = 0;
+            for (let j = 1; j<i;j++){
+                if (i%j == 0){
+                    result += j;
+                }
+            }
+            if (i==result){
+                document.write(result)
+            }
+        }
+    
+        
+
+
+    </script>
+</body>
+</html>

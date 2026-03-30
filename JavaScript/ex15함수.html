@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //함수 - 코드를 묶어놓은 것
+        // 자주 사용되는 코드를 하나의 명령어로 실행시키는 것
+        // console에 안녕하세요를 3번 출력하는 함수 만들기
+
+        /*
+            JavaScript에서 함수를 정의할 때는 크게 1.선언방식 2.표현방식이 있다.
+            두 방식의 차이점은 
+            선언방식은 위치에 상관없이 함수를 정의하면 사용할 수 있음.
+            표현방식은 반드시 정의 후 함수를 호출해야함.
+
+            - 어디서든 함수를 사용해야한다 -> 선언방식
+            - 특정조건에서만 함수를 사용해야한다 -> 표현방식
+            
+        */
+        
+        //선언방식은 호출을 먼저하고 나중에 선언해도 상관 없음
+        helloCon();
+
+        //선언방식
+        function helloCon(){
+            console.log("안녕하세요!");
+            console.log("안녕하세요!");
+            console.log("안녕하세요!");
+        }
+
+        //함수호출
+        helloCon();
+
+        // 표현방식은 함수를 먼저 정의해야만, 사용할 수 있음
+        helloC();
+        //표현방식 > 변수에 함수를 담아서 선언하는 방식
+        let helloC = function() {
+            console.log("잘가세요");
+            console.log("잘가세요");
+            console.log("잘가세요");
+        }
+
+        //함수호출
+        helloC();
+
+
+
+    </script>
+</body>
+</html>

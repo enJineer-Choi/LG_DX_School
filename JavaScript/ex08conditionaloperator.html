@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //삼항 연산자 사용하지 않고 완성한 첫번째 코드
+        // const num1 = parseInt(prompt("첫 번째 정수를 입력해주세요 "));
+        // const num2 = parseInt(prompt("두 번째 정수를 입력해주세요 "));
+
+        // let result = 0;
+
+        // if (num1>num2){
+        //     result = num1;
+        // }
+        // else {result = num2;}
+        // document.write("큰 값 출력 : ", result);
+
+        /*
+        parseInt : 문자열을 정수형태로 변환
+        parseFloat : 문자열을 실수형태로 변환
+        Number : 문자열을 숫자(정수,실수) 형태로 변환 (숫자 입력받으면 입력받은 그대로 변환)
+        String : 문자열로 변환 (숫자뿐만 아니라 boolean도 변환)
+        */
+
+
+        // 삼항 연산자 활용한 두번째 코드
+        const num1 = parseInt(prompt("첫 번째 정수를 입력해주세요 "));
+        const num2 = parseInt(prompt("두 번째 정수를 입력해주세요 "));
+
+        let result = 0;
+
+        result = num1>=num2 ? num1:num2;
+
+        document.write("큰값 출력 : ",result);
+
+    </script>
+</body>
+</html>

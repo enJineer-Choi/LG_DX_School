@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //문제. 입력하고 싶은 사람의 숫자를 입력받고
+        // 그 수만큼 사람의 이름을 입력받는다
+        // 그리고 입력한 사람 이름 전부를 출력
+
+        // 나의 풀이
+        // const num = parseInt(prompt("숫자를 입력하세요"))
+        // const names = [];
+        // for (i = 1;i<=num;i++){
+        //     name = prompt("이름을 입력하세요");
+        //     document.write(name);
+        //     document.write("<br>");
+        //     names.push(name);
+
+        // }
+        // document.write(names)
+
+        //첫번째 풀이
+        const number = parseInt(prompt("입력할 사람의 수 입력"))
+
+        const names = new Array(number);
+
+        for (i=0;i<names.length;i++){
+            names[i] = prompt("이름을 입력해주세요");
+
+        }
+
+        for (let i = 0;i<names.length;i++){
+            document.write(names[i] + " ");
+        }
+
+
+
+
+    </script>
+</body>
+</html>
