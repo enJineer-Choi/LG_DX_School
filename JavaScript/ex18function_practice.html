@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>    
+        const list = [1,8,11,13,18,45,21,87,93];
+
+        let num = list[0]
+        function searchMaxnum(Array) {
+            for (i=0;i<=Array.length;i++){
+                if (num <= Array[i]){
+                    num = Array[i];
+                }
+                
+            }
+            return num;
+        }
+        
+        const maxNum = searchMaxnum(list);
+
+
+        document.write("가장 큰수는 :",maxNum);
+
+        //에러가 났던 이유 : searchMaxnum function에 리턴값을 넣지 않았음.
+        //받아올 매개변수 이름을 list로 해도 상관없음.(나는 Array로 받았음 )
+        // 최댓값을 저장해올 변수를 함수안에 선언하는게 좋을듯?
+        // return을 만나는 순간 함수가 종료됨.
+    </script>
+</body>
+</html>

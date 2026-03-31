@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 기존의 함수 방식 (두수를 더해서 돌려주는 함수)
+        // 선언방식
+        function plus1(num1,num2){
+            return num1 + num2;
+        }
+        // 표현방식
+        const plus2 = function(num1,num2){
+            return num1 + num2;
+        }
+        //화살표 함수(기본) - 여러줄의 코드 작성가능 (중괄호 안에)
+        const plus3 = (num1,num2) => {
+            return num1 + num2;
+        }
+
+        //화살표 함수 - 리턴 한줄의 코드만 있을 때
+        const plus4 = (num1,num2) => num1 + num2;
+
+        //화살표 함수 - 매개변수 1개일때
+        const helloName = name => name + "님 환영합니다!";
+        // 백틱 사용
+        const helloName1 = name => `${name}님 환영합니다!`;
+
+        console.log(helloName("최석진"));
+    </script>
+</body>
+</html>

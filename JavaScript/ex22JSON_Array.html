@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //회원리스트
+        // 배열안에 객체를 넣는 것이 가능
+        const memberList = [
+            {
+                name : "A",
+                age : 21,
+                nickname : 'a'
+            },
+            {
+                name : "B",
+                age : 25,
+                nickname : 'b'
+            },
+            {
+                name : "C",
+                age : 29,
+                nickname : 'c'
+            },
+        ];
+
+        // 모든 회원정보를 웹페이지에 테이블 형태로 나오게 해주세요
+        /* 처음 작성 코드
+        for (i = 0; i<=memberList.length;i++){
+            for (j =0;j<=3;j++)
+                {
+                    memberList[i][j]
+                }
+        
+        }
+        */
+
+
+        document.write("<table border = '1px solid black'>");
+        document.write("<tr>");
+        document.write("<td>번호</td>");
+        document.write("<td>이름</td>");
+        document.write("<td>나이</td>");
+        document.write("<td>닉네임</td>");
+        document.write("</tr>");
+
+        for (let i = 0; i<memberList.length;i++){
+            document.write("<tr>")
+            document.write(`<td> ${i+1}</td>`)
+            document.write(`<td> ${memberList[i].name}</td>`)
+            document.write(`<td> ${memberList[i].age}</td>`)
+            document.write(`<td> ${memberList[i].nickname}</td>`)
+            document.write("</tr>")
+        }
+
+        //table은 세로로 값을 넣는다.. > HTML 복습 필요..
+
+        document.write("</table>");
+
+        
+
+    </script>
+</body>
+</html>

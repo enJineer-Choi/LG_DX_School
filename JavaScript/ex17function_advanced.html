@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function nameHello(){
+            console.log("님 환영합니다!");
+
+            function nick(){
+                console.log("닉네임 환영합니다!")
+            }
+
+            nick();
+        }
+
+        nameHello();
+        // nick();
+        // nameHello() 함수 안에 nick()함수를 정의하고 , nick()함수를 nameHello()함수밖에서 선언하면 에러 발생 (지역함수 느낌)
+        // nameHello() 함수 안에서 nick()함수 선언하면 사용가능!
+                    
+                        // 매개변수 작성시 type을 작성하지 않고, 변수의 이름만 작성
+        function plusModel(num1,num2){
+            //두수의 합을 돌려주는 모델
+            //return : 함수 값을 반환
+            return num1 + num2;
+        }
+
+        console.log(plusModel(4,6))
+    </script>
+</body>
+</html>

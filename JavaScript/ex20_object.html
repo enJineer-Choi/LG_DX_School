@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            객체(object)
+                - 데이터(속성,필드)와 그 데이터를 처리하는 기능 (행위, 메소드,함수)를 묶은 독립적인 단위
+            예시)
+            - 사람
+            속성 : 이름, 나이, 성별, 키, 몸무게
+            기능 : 걷다, 말하다, 먹다, 잠자다,
+        */
+        /* javaScript에서는 객체를 {}로 정의한다
+            속성과 기능은 key : value 형태로 정의
+        */
+        const person = {
+            name : "최석진",
+            age : 100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+            eating : () => {
+                console.log("밥을 잘 먹습니다");
+            }
+        };
+
+        // 객체 안에 값을 꺼내보고 함수 사용하기
+        console.log(person.name);
+        // 객체 안의 값은 대입연산자를 통해서 바뀔 수 있음.
+        person.name = "Samuel";
+        console.log(person.name);
+        
+        console.log(person.eating)// > 함수 안에 이미 console.log를 했으므로 굳이 다시 할필요없음.> 그래서 이상하게 나온듯??
+        person.eating();
+    </script>
+</body>
+</html>

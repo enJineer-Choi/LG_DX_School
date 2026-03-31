@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //랜덤수 추출하기
+        //Math.random -> 0 <= random < 1 사이의 수
+        //Math.floor -> 소수점 나머지 버리기
+        // const random = Math.floor(Math.random()*10)+1;
+        // console.log(random);
+
+
+        //실습 
+        // 저녁메뉴 추천 프로그램
+        //1. 사용자로 부터 몇개의 메뉴를 입력할 것인지 입력받기
+        //2. 입력한 숫자만큼 음식 메뉴이름을 입력합니다
+        //3., 음식메뉴 중 하나를 랜덤으로 추천해줍니다
+        //조건 : 반드시 배열을 사용할것
+
+
+
+        // 이렇게 설계하면 0번째 인덱스에 아무것도 들어가지 않음.
+        // const num = parseInt(prompt("저녁 메뉴 개수를 입력해 주세요"))
+        // const menus = new Array(num);
+        // for (i = 1 ; i<=num;i++){
+        //     menus[i] = prompt("음식을 입력해주세요");
+        // }
+        // const random_num = Math.floor(Math.random()*num)+1;
+        // document.write(menus[random_num]);
+        
+        
+        
+        
+        
+        
+        const num = parseInt(prompt("저녁 메뉴 개수를 입력해 주세요"))
+        const menus = new Array(num);
+        for (i = 0 ; i<=menus.length;i++){
+            menus[i] = prompt("음식을 입력해주세요");
+        }
+
+        const random_num = Math.floor(Math.random()*menus.length);
+        // 길이를 5라고 입력받았다면, 0~1 에 length를 곱해주면 0~5 즉, 4까지 알아서 나옴
+        document.write(menus[random_num]);
+    </script>
+</body>
+</html>

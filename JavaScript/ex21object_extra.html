@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            객체안에서 함수를 사용하는데
+            함수 안에서 변수명을 쓰는 순간 해당 변수명은 무조건 매개변수로만 인식
+
+            속성에 해당되는 변수명을 사용하고 싶다면 this. 키워드를 사용해줘야함.
+
+            Arrow function 사용시 -> this 키워드 사용 불가능
+                - 함수 사용시 this 키워드를 사용해야할 때는 사용하면 안됨.
+        */
+
+
+        // const char = {
+        //     nick : "samuel",
+        //     ahello : function(){
+        //         console.log(nick+ "님 환영함");
+        //     },
+        //     bhello : () => {console.log(nick+"님 환영함");}
+        
+        
+        
+        // };
+        // // 함수안에서 변수를 정의하는 순간, nick을 매개변수로 인식. 
+        // char.ahello();
+        // char.bhello();
+
+
+        //따라서 this로 지정을 해줘야함.
+        const char = {
+            nick : "samuel",
+            ahello : function(){
+                console.log(this.nick+ "님 환영함");
+            },
+            bhello : () => {console.log(this.nick+"님 환영함");}
+        
+        
+        
+        };
+        // 함수안에서 변수를 정의하는 순간, nick을 매개변수로 인식. 
+        char.ahello();
+        char.bhello();
+
+        //JS에서는 객체에 속성과 기능을 추가할 수 있음.
+        char.level = 70;
+        console.log(char.level);
+        console.log(char);
+    </script>
+</body>
+</html>
