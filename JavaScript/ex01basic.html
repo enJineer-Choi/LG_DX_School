@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = 'today'>오늘은 수요일!!</div>
+    <script>
+        //document 객체를 활용하여 today id의 요소의 글 바꾸기
+        //1. 요소 가져오기 -> 객체 형태로
+        //.getElementById("id명") -> id가 일치하는 요소를 가져오기
+        const toDay = document.getElementById("today");
+
+        console.log(toDay);
+
+        //2. 요소안에 내용 (content) 바꾸기
+        // .innerText -> 요소안에 내용 바꾸기 (문자로 인식)
+        toDay.innerText = "오늘은 만우절!";
+        console.log(toDay.innerText);
+        
+        
+        toDay.innerText = "<a href = '#'>네이버로 이동 </a>"
+
+        // .innerHTML ->요소 안에 내용을 HTML 형식으로 인식
+        toDay.innerHTML = "<a href = '#'>네이버로 이동 </a>";
+    </script>
+</body>
+</html>
