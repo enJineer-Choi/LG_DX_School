@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>숫자 추측 게임</h1>
+    <p> 1부터 100까지의 숫자 중에서 하나의 숫자를 뽑았습니다.</p>
+
+    <input type="text" id="text">
+    <button onclick ="result()">추측</button>
+    <script>
+
+        const answer = Math.floor(Math.random()*100) + 1;
+
+        const guess = new Array(10);
+        
+        let result = () => {
+            const input = document.getElementById('text');
+            
+        }
+        for (i=0;i<10;i++){
+                guess.push(input.value);
+                document.write(guess[i]);
+            }
+        if (input.value > answer){
+                alert("작은 수를 입력하시오");
+        }else if (input.value < answer){
+                alert("큰 수를 입력하시오");
+        }else {"정답입니다!"}
+
+
+
+        
+    </script>
+</body>
+</html>

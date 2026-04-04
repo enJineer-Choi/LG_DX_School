@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h2>버튼을 클릭해주세요</h2>
+    <br>
+    <button onclick="Hello()">h1태그 생성</button>
+    <button >a태그 생성</button>
+    <button>ul태그 생성</button>
+
+
+    <script>
+        function Hello(){document.write("<h1>DOM 활용해보기</h1>")}
+        // const go = document.getElementById("go");
+        // go.innerHTML = "<a href = '#'>네이버로 이동 </a>";
+        
+    </script> -->
+
+
+
+    <div id ='main'>    
+        <h1>클릭한번 해볼까요?</h1>
+        
+    </div>
+
+    <button onclick="createH()">h1태그 생성</button>
+    <button onclick ="createA()">a태그 생성</button>
+    <button onclick ="createU()">ul태그 생성</button>
+    <script>
+        const main = document.getElementById("main");
+        // 요소를 가져오는 것은 각 함수 내에서 매번 할 필요없이 한번에 하고 코드를 간결화 할 수 있음
+
+        const createH = () => {
+            
+            main.innerHTML = main.innerHTML + "<h1>DOM활용해보기!</h1>";//main.innerHTML을 해주지 않으면 이전 내용이 사라짐
+        }
+        const createA = () => {
+            const a = "<a href='https://www.google.com'> Google로 가보자!</a>";
+            main.innerHTML = main.innerHTML + a;
+        }
+        const createU = () => {
+            const u = `<ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                </ul>`
+            main.innerHTML = main.innerHTML + u;
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

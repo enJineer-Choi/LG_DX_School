@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap" style="text-align: center;">
+        <p id="result">0</p>
+        <button onclick="createP()">+1증가</button>
+        <button onclick="createM()">-1감소</button>
+    </div>
+    <script>
+        
+        const result = document.getElementById('result');
+        // const createP = () =>{result.innerText = parseInt(result.innerText)+1}
+        // const createM = () =>{result.innerText = parseInt(result.innerText)-1}
+
+        const createP = () => {
+            let count = parseInt(result.innerText);
+            result.innerText = count + 1;
+        }
+        const createM = () => {
+            let count = parseInt(result.innerText);
+            result.innerText = count - 1;
+        }
+    </script>
+</body>
+</html>
