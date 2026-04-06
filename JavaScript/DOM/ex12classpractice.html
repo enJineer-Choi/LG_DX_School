@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- class tag는 li에 넣어줘야함!!ㄴ -->
+    <div class="food">
+        <h3>한식</h3>
+        <ol >
+            <li class="kr">잡채</li>
+            <li class="kr">삼겹살</li>
+            <li class="kr">김치찌개</li>
+        </ol>
+        <button onclick="korean()">한식 주문하기</button>
+    </div>
+    <div class="food">
+        <h3>일식</h3>
+        <ol >
+            <li class="jp">돈카츠</li>
+            <li class="jp">초밥</li>
+            <li class="jp">모밀</li>
+        </ol>
+        <button onclick="japanese()">일식 주문하기</button>
+    </div>
+    <div class="food">
+        <h3>중식</h3>
+        <ol >
+            <li class="ch">짜장면</li>
+            <li class="ch">짬뽕</li>
+            <li class="ch">탕수육</li>
+        </ol>
+        <button onclick="chinese()">중식 주문하기</button>
+    </div>
+    <script>
+        // 구현단에서 문제생긴듯...
+        const korean = () =>{
+            const lis = document.getElementsByClassName('kr');
+            //첫번째 문제. .getElementsByTagName ->.getElementsByClassName
+            //문장 완성하기 
+            let text = "메뉴 : ";
+            //메뉴는 값이 바뀌므로 const로 하면 안됨.
+            
+            //Array.from(lis).forEach(kr => alert(kr.innerText)); > 숫자로 나오지 않기 때문에 for문을 사용하는게 나음
+            for (let i = 0;i<lis.length;i++){
+                text += (i+1)+"."+ lis[i].innerText;
+            }
+            alert(text);
+        }
+        const japanese = () =>{
+            const lis = document.getElementsByClassName('jp');
+            //첫번째 문제. .getElementsByTagName ->.getElementsByClassName
+            //문장 완성하기 
+            let text = "메뉴 : ";
+            //메뉴는 값이 바뀌므로 const로 하면 안됨.
+            
+            //Array.from(lis).forEach(kr => alert(kr.innerText)); > 숫자로 나오지 않기 때문에 for문을 사용하는게 나음
+            for (let i = 0;i<lis.length;i++){
+                text += (i+1)+"."+ lis[i].innerText; //text옆에 누적되서 값들이 출력되도록.
+            }
+            alert(text);
+        }
+        const chinese = () =>{
+            const lis = document.getElementsByClassName('ch');
+            //첫번째 문제. .getElementsByTagName ->.getElementsByClassName
+            //문장 완성하기 
+            let text = "메뉴 : ";
+            //메뉴는 값이 바뀌므로 const로 하면 안됨.
+            
+            //Array.from(lis).forEach(kr => alert(kr.innerText)); > 숫자로 나오지 않기 때문에 for문을 사용하는게 나음
+            for (let i = 0;i<lis.length;i++){
+                text += (i+1)+"."+ lis[i].innerText;
+            }
+            alert(text);
+        }
+       //동일한 코드가 반복됨 (나라이름 가져오는 부분만 수정하면됨)
+       
+    </script>
+</body>
+</html>

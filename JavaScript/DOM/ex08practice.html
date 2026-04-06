@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>입력한 값을 h1태그로 출력해보기</h1>
+    <input type="text" id = 'input'>
+    <button onclick="inputH1()">h1태그 출력</button>
+    <script>
+        const input = document.getElementById('input');
+        const inputH1 = () => {
+            
+            input.innerHTML = input.innerHTML + document.write("<h1>"+input.value+"</h1>");
+        }
+        //자꾸 페이지가 넘어가는 문제가 생김... > 밑에 출력이 왜 안돼
+    </script> -->
+
+    <h1>입력한 값을 h1태그로 출력해보기</h1>
+    <input type="text" id = 'input'>
+    <button onclick="inputH1()">h1태그 출력</button>
+    <div id="result"></div>
+    <script>
+        
+        const inputH1 = () => {
+            const input = document.getElementById('input');
+            //const input = document.getElementById('input').value; 이렇게 작성해도 됨
+            document.getElementById('result').innerHTML=`<h1>${input}</h1>`
+            // input.innerHTML = input.innerHTML + document.write("<h1>"+input.value+"</h1>");
+        }
+        //자꾸 페이지가 넘어가는 문제가 생김... > 밑에 출력이 왜 안돼
+    </script>
+</body>
+</html>

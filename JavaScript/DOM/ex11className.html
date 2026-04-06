@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>박순자 녹두집</li>
+        <li>신신식당</li>
+        <li class="point">쿠로시로</li>
+        <li>대접</li>
+        <li class="point">잘먹었습니다</li>
+        <li>명덕식당</li>
+        <li>청원모밀</li>
+        <li class="point">황금성</li>
+    </ul>
+    <script>
+        ///해당 클래스명과 일치하는 요소 가져오기
+        const point = document.getElementsByClassName('point');
+        console.log(point);
+        Array.from(point).forEach(li => console.log(li.innerText)); // point를 배열형태로 변경해야함
+        
+
+        const list = ['참치','꽁치','넙치','고등어'];
+        //forEach 사용
+        list.forEach((food)=>{console.log(food)});
+        //매개변수 하나만 쓸거면 소괄호 없어도 됨. & 실행문장도 한줄이면 중괄호 없어도 됨.
+        list.forEach(food => console.log(food));
+    </script>
+</body>
+</html>

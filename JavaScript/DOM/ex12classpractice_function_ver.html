@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="food">
+        <h3>한식</h3>
+        <ol>
+            <li class="korea">잡채</li>
+            <li class="korea">삼겹살</li>
+            <li class="korea">김밥</li>
+        </ol>
+        <button onclick="food('korea')">한식주문하기</button>
+    </div>
+ 
+    <div class="food">
+        <h3>일식</h3>
+        <ol>
+            <li class="japen">돈카츠</li>
+            <li class="japen">초밥</li>
+            <li class="japen">소바</li>
+        </ol>
+        <button onclick="food('japen')">일식주문하기</button>
+    </div>
+ 
+    <div class="food">
+        <h3>중식</h3>
+        <ol>
+            <li class="china">짜장면</li>
+            <li class="china">짬뽕</li>
+            <li class="china">볶음밥</li>
+        </ol>
+        <button onclick="food('china')">중식주문하기</button>
+    </div>
+ 
+    <script>
+ 
+        const food = (menu) => {
+           // 한국 음식 li 가져오기
+           const lis = document.getElementsByClassName(menu);
+           // 문장완성하기
+           let text = "메뉴 : ";
+           
+           for(let i = 0; i < lis.length; i++){
+                text += (i + 1) + "." + lis[i].innerText;
+           }
+           alert(text);
+ 
+        }
+ 
+        // const korea = () => {
+        //    // 한국 음식 li 가져오기
+        //    const lis = document.getElementsByClassName("korea");
+        //    // 문장완성하기
+        //    let text = "메뉴 : ";
+           
+        //    for(let i = 0; i < lis.length; i++){
+        //         text += (i + 1) + "." + lis[i].innerText;
+        //    }
+        //    alert(text);
+ 
+        // }
+        // const japen = () => {
+        //     // 일본 음식 li 가져오기
+        //    const lis = document.getElementsByClassName("japen");
+        //    // 문장완성하기
+        //    let text = "메뉴 : ";
+           
+        //    for(let i = 0; i < lis.length; i++){
+        //         text += (i + 1) + "." + lis[i].innerText;
+        //    }
+        //    alert(text);
+        // }
+        // const china = () => {
+        //    // 중국 음식 li 가져오기
+        //    const lis = document.getElementsByClassName("china");
+        //    // 문장완성하기
+        //    let text = "메뉴 : ";
+           
+        //    for(let i = 0; i < lis.length; i++){
+        //         text += (i + 1) + "." + lis[i].innerText;
+        //    }
+        //    alert(text);
+        // }
+ 
+ 
+    </script>
+</body>
+</html>
+ 

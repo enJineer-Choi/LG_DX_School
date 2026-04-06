@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>타순</h3>
+        <ol>
+            <li>김호령</li>
+            <li>카스트로</li>
+            <li>김도영</li>
+            <li>나성범</li>
+            <li>김선빈</li>
+            <li>윤도현</li>
+            <li>데일</li>
+            <li>김태군</li>
+            <li>박민</li>
+        </ol>
+        <input type="number" id="num">
+        <input type="text" id="name">
+        <button onclick="changePlayer()">바꾸기</button>
+    </div>
+
+    <script>
+        const changePlayer = () => {
+            const li = document.getElementsByTagName('li');
+            const num = parseInt(document.getElementById('num').value);
+            //parseInt로 감싸주는게 좋음.
+            const name = document.getElementById('name').value;
+            li[num-1].innerText = name
+        }
+        //ol태그로 접근하면 안되나?? > ol태그로 접근했었는데 안되서 li태그로 접근하니깐됨
+        //ol은 전체를 감싸는 태그이므로 ol로 접근했다고 해도, li태그로 한번더 타고 들어가야함
+    </script>
+</body>
+</html>
