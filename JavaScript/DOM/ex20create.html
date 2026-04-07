@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id ="list">
+        <li>치맥</li>
+    </ul>
+    <button onclick="addEl()">추가하기</button>
+    <button onclick="removeEl()">삭제하기</button>
+
+
+    <script>
+        const addEl= () => {
+            const ul = document.querySelector("#list");
+            //요소를 생성해서 해당 ul 안에 추가하기
+
+            //문자열을 innerHTML 넣는데 넣을때 태그로 인식해서 변환하는 방법
+            //.ul.innerHTML += "<li>삼쏘</li>";
+
+            //처음부터 객체를 생성해서 넣음 > 요소 자체를 만들면, 다양한 제어가 가능하게 됨.
+            //1.글자 생성하기
+            const text = document.createTextNode("삼쏘");
+            //2.요소 생성하기
+            const li = document.createElement("li");
+            //3. 요소 안에 글자 넣기 (li가 부모 text가 자식)
+            li.appendChild(text);
+            //4. 만들어진 요소 해당 넣고 싶은 요소에 넣기
+            ul.appendChild(li);
+        }
+        const removeEl = () =>{
+            const ul = document.querySelector("#list");
+            const li = document.querySelector("li");
+            ul.removeChild(li);
+        }
+    </script>
+</body>
+</html>

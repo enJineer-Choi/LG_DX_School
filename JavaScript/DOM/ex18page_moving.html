@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>현재 페이지는 잘못된 요청으로 만들어진 페이지입니다.</h2>
+    <h3>
+        <span id="second">10</span>초 뒤에 메인페이지로 이동합니다.
+    </h3>
+
+    <script>
+        //문제 : 현재 페이지에서 10초 뒤에서 네이버 페이지로 이동시키시오
+        //단 초가 줄어들때맏다 span태그 안에 숫자가 줄어야함.
+        // let count = 10;
+        // let setCount = () => {
+        //     count--;
+        //     document.getElementById('second').innerText = count;
+        // }
+        // let timer = setInterval(setCount,1000);
+        // if (count == 0){
+
+        //     clearInterval(timer);
+        //     location.href = 'https://www.naver.com';
+        // }
+        // 이렇게 짰더니 0에서 멈추지 않고, 페이지도 이동하지 않음...
+
+        // let count = 10;
+        // const timeCount = () =>{
+        //     count--;
+        //     document.getElementById('second').innerText = count;
+
+        //     if (count ==0){
+        //         location.href = 'https://www.naver.com';
+        //     }
+        // }
+
+        // setInterval(timecount,1000)
+
+        
+        let count = 10;
+ 
+        const timeCount = () => {
+            count--;
+            document.getElementById("time").innerText = count;
+ 
+            if(count == 0){
+                location.href = "https://www.naver.com";
+            }
+        }
+ 
+        setInterval( timeCount, 1000);
+ 
+    </script>
+</body>
+</html>

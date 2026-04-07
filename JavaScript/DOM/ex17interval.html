@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result">0</p>
+    <button onclick="timestop()">멈추기</button>
+    <script>
+        //1초에 1씩 값이 올라가는 걸 하고 싶다면?
+        //setInterval(함수, 밀리세컨드)
+        let count = 0;
+        let setCount = () => {
+            count++;
+            document.getElementById('result').innerText = count;
+        }
+        let timer = setInterval(setCount,1000);
+
+        const timestop = () => {
+            clearInterval(timer);
+        }
+    </script>
+</body>
+</html>

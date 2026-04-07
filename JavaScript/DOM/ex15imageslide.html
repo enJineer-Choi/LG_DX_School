@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <img id = "img" src="./images/img1.jpg" width="200px">
+        <br>
+        <button onclick="pre()">이전</button>
+        <button onclick="next()">다음</button>
+    </div>
+
+
+    <script>
+        // 문제. 다음버튼을 누르면 다음 이미지로 이전버튼을 누르면 이전 이미지로
+        // 단, 맨첫장에서는 이전버튼 X, 맨 마지막 장에서는 다음버튼 X
+
+        
+
+        //리소스를 쉽게 관리하는 법
+        // 이미지 주소저장 배열
+        const source = [
+            "./images/im1.jpg",
+            "./images/im2.jpg",
+            "./images/im3.jpg",
+            "./images/im4.jpg",
+            "./images/im5.jpg",
+            "./images/im6.jpg",
+            "./images/im7.jpg"
+        ];
+        let point = 0;
+ 
+ 
+        const pre = () => {
+            if(point > 0){
+                // 다음 위치로 증가
+                point--;
+            }else{
+                alert("이전 이미지가 없습니다.");
+            }
+            img.setAttribute("src", source[point]);
+        }
+ 
+        const next = () => {
+            if(point < source.length - 1){
+                // 다음 위치로 증가
+                point++;
+            }else{
+                alert("다음 이미지가 없습니다.");
+            }
+            img.setAttribute("src", source[point]);
+        }
+
+
+
+
+
+
+
+
+
+        //현재 위치를 저장하고 있는 변수
+        //let i = 1;
+
+        // // img는 어차피 계속 가져올 거니깐 미리 선언해도 상관없음.
+        // const img = document.getElementById('img');
+        // const pre = () => {
+        //     // const img = document.getElementById('img');
+        //     if(i>0){
+        //         img.setAttribute("src",`./images/img${i}.jpg`)
+        //         i--;
+        //     }
+        //     else{alert("이전 이미지가 없습니다")}
+            
+        // }
+        // const next = () => {
+        //     // const img = document.getElementById('img');
+        //     if(i<7){
+        //         img.setAttribute("src",`./images/img${i}.jpg`)
+        //         i++;
+        //     }
+        //     else(alert("다음 이미지가 없습니다"))
+            
+        // }
+        //while문으로 작성하면 바로 넘어감... > 반복을 해야하는게 아니라 조건문을 통해서 하나씩 늘려가야함....
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p id="name" class="name">최석진</p>
+    </div>
+    <span>A</span>
+    <span>B</span>
+    <span>C</span>
+    <span>D</span>
+    <span>E</span>
+    <span>F</span>
+    <span>G</span>
+
+    <script>
+        //JavaScript에서 요소를 쉽게 선택하는 방법
+        //.querySelector("선택자")
+        // 최석진 이름을 홍길동으로 변경
+        // const div = document.querySelector("#name"); // 1. 아이디 기준으로 찾을때 >
+        //  selector전체에서 찾는것이므로 "#"을 써줘야함
+        // const div = document.querySelector(".name"); // 2. 클래스 기준으로 찾을때 >
+        // const div = document.querySelector("div"); // 3. 태그명 기준으로 찾을때 >
+        const div = document.querySelector("div p"); // 4. 계층 기준으로 찾을때 >
+        
+
+        div.innerText = "홍길동";
+
+        //queryselector는 맨 처음발견하는 요소하나만 반환
+        //전체를 가져오고 싶으면 querySelectorAll > 반복문을 통해서 요소를 가져와서 반환.
+        const span = document.querySelectorAll('span');
+        console.log(span);
+
+        
+    </script>
+</body>
+</html>

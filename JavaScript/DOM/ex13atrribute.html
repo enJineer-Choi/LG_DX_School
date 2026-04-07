@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id = 'url' href="https://www.naver.com">네이버로 이동</a>
+    <p id="text">오늘은 목요일입니다.</p>
+    <script>
+        const text= document.getElementById('text');
+        //요소의 스타일 변경 (요소.style.속성 = '값')
+        text.style.color = "red";
+        text.style.backgroundColor ="aqua";
+
+
+
+        const a = document.getElementById('url');
+        //요소의 속성을 변경 (요소.속성명 = 값)
+        // a.href = "https://www.smhrd.or.kr";
+        // 요소의 속성을 변경 (요소.setAttribute ("속셩명","값")) 
+        // > 직접적으로 값을 바꾸기보다는 이 방법처럼 함수를 통해 접근하는 게 좋음.
+        a.setAttribute("href","https://www.smhrd.or.kr");
+    </script>
+</body>
+</html>

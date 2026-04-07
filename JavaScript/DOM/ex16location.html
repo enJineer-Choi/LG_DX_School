@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="url">
+    <button onclick="moveUrl()">이동!</button>
+
+    <script>
+        // 문제. input태그에 네이버 입력 후 이동을 누르면 -> 네이버이동
+        // 다음 입력 후 이동을 누르면 -> 다음 이동
+        //. 스마트인재개발원 입력 후 이동을 누르면 -> 스마트인재개발원
+        const moveUrl= () => {
+            const url = document.getElementById('url').value;
+            if (url == "네이버"){
+                location.href = "https://www.naver.com"
+            }else if (url == "구글"){
+                location.href = "https://www.google.com"
+            }else if (url == "스마트인재개발원"){
+                location.href = "https://www.smhrd.or.kr"
+            }
+        }
+
+
+
+
+
+        //javascript안에서 페이지를 이동할 때
+        //location.href = 'https://www.naver.com';
+    </script>
+</body>
+</html>

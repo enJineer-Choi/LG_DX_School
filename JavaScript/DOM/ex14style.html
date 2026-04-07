@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="text">
+        아래버튼을 클릭하면 이 텍스트의 색깔과 크기가 변해요!
+    </div>
+    <button onclick = 'changeText()'>이 버튼 클릭!!</button>
+
+    <script>
+        const changeText = () =>{
+            const text = document.getElementById('text');
+            text.style.color = 'tomato';
+            text.style.fontWeight = 'bold';
+            text.style.fontSize = '25px';
+        }
+        
+    </script>
+
+</body>
+</html>

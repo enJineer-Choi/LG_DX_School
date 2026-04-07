@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border : 1px solid black;
+            width: 400px;
+        }
+        .top{
+            background-color: tomato;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h3>분식집 메뉴 추가하기</h3>
+        메뉴 : <input type="text" id = "menu">  <br>
+        가격 : <input type="text" id = "price"> <br>
+        <button onclick="addMenu()">메뉴추가</button>
+        <table id="result">
+            <tr>
+                <td class="top">메뉴</td>
+                <td class="top">가격</td>
+            </tr>
+        </table>
+    </div>
+    <!-- <div>
+        새로운 태그를 생성할 때는 항상 div를 새로 만들어서 작성
+    </div> -->
+
+    <script>
+        const addMenu = () =>{
+            // 1. input태그 값 가져오기
+            const menu = document.querySelector("#menu").value;
+            const price = document.querySelector("#price").value;
+            console.log(menu,price);
+
+            //2. text node 만들고, td만들고 tr 포함시키기
+            const textMenu = document.createTextNode(menu);
+            const textPrice = document.createTextNode(price);
+
+            //3. td 요소 생성하기
+            const tdMenu = document.createElement("td");
+            const tdPrice = document.createElement("td");
+
+            //4. td 요소에 textnode 넣기
+            tdMenu.appendChild(textMenu);
+            tdPrice.appendChild(textPrice);
+
+            //5. tr 요소 생성하기
+            const tr = document.createElement("tr");
+
+            //6. tr요소에 td요소 넣기
+            tr.appendChild(tdMenu);
+            tr.appendChild(tdPrice);
+
+            // 7. table 안에 만든것들을 추가해줘야함.
+            const result = document.querySelector("#result");
+            result.appendChild(tr);
+
+        }
+
+    </script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+</body>
+</html>
