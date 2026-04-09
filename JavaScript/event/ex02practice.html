@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100%;
+            height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>
+            <span>0</span>.
+            <span>000</span>
+            초
+        </h1>
+        <h1 id="h1">Javascript Click</h1>
+    </div>
+
+    <script>
+        const h1 = document.querySelector("#h1");
+        h1.addEventListener('dblclick',()=>{
+            const wrap = document.querySelector("#wrap"); //밖에 선언해도 됨
+            wrap.style.backgroundColor ='tomato';
+            wrap.style.color = 'white';
+        });
+        h1.addEventListener('click',()=>{
+            const wrap = document.querySelector("#wrap"); //밖에 선언해도 됨
+            wrap.style.backgroundColor ='white';
+            wrap.style.color = 'black';
+        });
+        //끝에 도달했을때의 시간을 체크
+        
+    </script>
+</body>
+</html>

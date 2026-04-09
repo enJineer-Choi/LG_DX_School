@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="moveImgStyle.css"/>
+</head>
+<body>
+    <div id="bg">
+        <h1>
+            <span id="second">0</span>.
+            <span id="msecond">000</span>
+            초
+        </h1>
+        <img src='img/horse.png'> 
+        <button class='btn left'>LEFT</button>
+        <button class='btn right'>RIGHT</button>
+    </div>
+    <script>
+        //버튼을 클릭해서 말을 이동시키기
+        //img 태그의 right 속성을 변경
+        // const img = document.querySelector("img");
+        
+        // const btn_left = document.querySelector(".btn.left");
+
+        // btn_left.addEventListener("click",()=>{
+        //     img.style.right +="100px";
+        // })
+        // const btn_right = document.querySelector(".btn.right");
+
+        // btn_left.addEventListener("click",()=>{
+        //     img.style.right -="100px";
+        // })
+
+        //시간초 기능
+        const second = document.querySelector("#second");
+        const msecond = document.querySelector("#msecond");
+
+        let mcount = 0; //밀리초를 저장할 변수
+        let scount = 0; //초를 저장할 변수
+
+        //시간초를 올리는 함수
+        const time = () => {
+            mcount += 10;
+            if(mcount===1000){
+                scount++;
+                mcount = 0;
+            }
+            second.innerText = scount;
+            msecond.innerText = mcount;
+
+            if(point > 1210){
+                clearInterval(horseGame);
+                alert("통과!");
+            }
+
+        }
+
+        const horseGame = setInterval(time,10);
+
+        // 말의 위치를 저장할 수 있는 변수를 만들어줘야 함...
+        let point = 0;
+
+        //이미지요소
+        const img = document.querySelector("img");
+
+        const body = document.querySelector("body");
+        body.addEventListener("keydown",(key) =>{
+            console.log(key.code);
+            if(key.code == "ArrowLeft"){
+                point +=10;
+
+            }else if (key.code = "ArrowRight"){
+                point -=10;
+            }else if(key.code="ArrowUp"){
+                point +=10;
+            }
+            img.style.right = point +"px";
+        });
+
+        // 왼쪽버튼
+        const left = document.querySelector(".left");
+        left.addEventListener("click",()=>{
+            point += 10;
+            img.style.right = point+"px"
+
+        });
+        //오른쪽
+        const right = document.querySelector(".right");
+        right.addEventListener("click",()=>{
+            point -= 10;
+            img.style.right = point+"px"
+
+        });
+    </script>
+</body>
+</html>
+ 

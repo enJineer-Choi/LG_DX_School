@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <p id = "result"></p>
+    <script>
+        const input = document.querySelector("#input");
+        // input 태그의 변화를 감지하는 이벤트
+        input.addEventListener("change",()=>{
+            console.log("input태그 변화 감지됨");
+        });
+
+        input.addEventListener("keydown",(key)=>{
+            console.log("input태그 키 누름");
+            console.log(key.code); //입력한 키의 정보가 출력됨
+            //input태그 입력하면 바로 result 출력되게 하기
+            const result = document.querySelector("#result");
+            result.innerText = input.value;
+        });
+    </script>
+</body>
+</html>
