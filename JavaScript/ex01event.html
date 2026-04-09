@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="click1()">클릭1</button>
+    <button id="btn2">클릭2</button>
+    <button id="btn3">클릭3</button>
+    <button id="btn4">클릭4</button>
+    <button id="btn5">클릭5</button>
+
+    <script>
+        //1.태그명에 직접지정하는 방식
+        const click1 = () =>{
+            alert("클릭1!");
+        }
+        //2.요소에 이벤트를 달아주는 방식
+        
+        //2.1 - 요소객체명.on이벤트 = 함수 > 잘 사용하지 않음
+        ///2.1.1 - 익명함수 방식 (함수 이름없이 만들어주는 방식) -> 해당 이벤트 기능을 한곳에서만 처리할 때
+        const btn2 = document.querySelector("#btn2");
+        btn2.onclick = () => {
+            alert("클릭2!");
+        }
+
+        ///2.1.2 - 함수사용 방식 () -> 중복되는 기능을 사용해야할때
+        const click3 = () => {
+            alert("클릭3!");
+        }
+        const btn3 = document.querySelector("#btn3");
+        btn3.onclick = click3;
+
+        //2.2 - 요소객체명.addEventListener("이벤트 종류",함수)
+        //2.2.1 - 익명함수 방식 
+        const btn4 = document.querySelector("#btn4");
+        btn4.addEventListener("click",()=>{
+            alert("클릭4");
+        });
+
+        //2.2.2 - 함수사용 방식
+        const btn5 = document.querySelector("#btn5");
+        btn5.addEventListener("click",click1); //기존 함수 재사용
+    </script>
+</body>
+</html>
